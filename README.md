@@ -8,7 +8,7 @@ It is hard to get an example of a raw SPI device on internet using Espressif esp
 ## Pins map:
 
 | ESP32 | MAX6675 |
-|-------+---------|
+|-------|---------|
 |    19 | SO      |
 |    23 | NC      |
 |    18 | SCK     |
