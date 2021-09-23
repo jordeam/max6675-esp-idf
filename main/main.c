@@ -33,7 +33,7 @@ void temp_task(void * pvParams) {
 
 
     if (res & (1 << 14))
-      printf("Sensor is not connected\n");
+      ESP_LOGE(TAG, "Sensor is not connected\n");
     else {
       res >>= 3;
       printf("SPI res = %d temp=%f\n", res, res * 0.25);
@@ -41,7 +41,7 @@ void temp_task(void * pvParams) {
 
     vTaskDelay(pdMS_TO_TICKS(1000));
   }
-}
+
 
 void app_main()
 {

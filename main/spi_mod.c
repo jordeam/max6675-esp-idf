@@ -2,10 +2,9 @@
 
 #include "spi_mod.h"
 
-spi_device_handle_t spi;
-
+/* SPI Config */
 spi_device_handle_t spi_init(void) {
-  /* SPI Config */
+  spi_device_handle_t spi;
   esp_err_t ret;
   spi_bus_config_t buscfg = {
     .miso_io_num = PIN_NUM_MISO,
