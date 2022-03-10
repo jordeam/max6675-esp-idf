@@ -29,10 +29,10 @@ void temp_task(void * pvParams) {
     spi_device_transmit(spi, &tM);
     spi_device_release_bus(spi);
 
-    uint16_t res = SPI_SWAP_DATA_RX(data, 16);
+    int16_t res = (int16_t) SPI_SWAP_DATA_RX(data, 16);
 
 
-    if (res & (1 << 14))
+    if (res & (1 << 2))
       ESP_LOGE(TAG, "Sensor is not connected\n");
     else {
       res >>= 3;
