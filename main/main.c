@@ -41,10 +41,9 @@ void temp_task(void * pvParams) {
 
     vTaskDelay(pdMS_TO_TICKS(1000));
   }
+}
 
-
-void app_main()
-{
+void app_main() {
   spi_device_handle_t spi;
   spi = spi_init();
 
